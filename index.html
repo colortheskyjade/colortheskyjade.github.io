@@ -10,6 +10,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/multiple.js/0.0.1/multiple.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/multiple.js/0.0.1/multiple.min.css" />
   <style type="text/css">
+    body {
+      overflow: hidden;
+    }
     div#container {
       margin: 0 auto;
       margin-top: 60vh;
@@ -29,7 +32,7 @@
       -webkit-transition: color 1s;
       transition: color 1s;
       position: relative;
-      background-color: #aaaec3;
+      background-color: #aaaec3; /* big image loads slow */
     }
     div#container a + a {
       margin-left: 3vw;
