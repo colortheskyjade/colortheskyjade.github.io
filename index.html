@@ -3,9 +3,41 @@
 <head>
   <title>Ruyan Chen</title>
   <!-- TODO(ruyan): Metadata here. -->
+  <!-- <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/multiple.js/0.0.1/multiple.min.css" />
+  <style type="text/css">
+    div#container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 35%;
+    }
+    div.skybox {
+      width: 15%;
+      height: 15vw;
+    }
+    div.skybox + div.skybox {
+      padding-left: 6%;
+    }
+  </style>
 </head>
 <body>
-TODO(ruyan): Write this part.
+  <div id="container">
+    <div class="skybox">R</div>
+    <div class="skybox">U</div>
+    <div class="skybox">Y</div>
+    <div class="skybox">A</div>
+    <div class="skybox">N</div>
+  </div>
 </body>
 <!-- TODO(ruyan): Analytics? -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/multiple.js/0.0.1/multiple.min.js"></script>
+<srcipt type="text/javascript">
+  var multiple = new Multiple({
+    selector: '.skyline',
+    background: 'url("assets/img/skyline.jpg")'
+  });
+</script>
 </html>
