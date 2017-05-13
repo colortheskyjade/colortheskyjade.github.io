@@ -30,8 +30,9 @@
       transition: color 1s;
       position: relative;
     }
-    div.skyline + div.skyline {
+    div#container a + a {
       margin-left: 3vw;
+      display: inline-block;
     }
     div.skyline:hover {
       color: #fff;
@@ -53,7 +54,7 @@
     }
     div.tooltip {
       position: absolute;
-      color: #333;
+      color: #2f7aaf;
       font-size: 2vw;
       line-height: normal;
       text-align: center;
@@ -67,26 +68,33 @@
     div.skyline:hover div.tooltip {
       top: 100%;
       opacity: 1;
-      -webkit-transition: all 350ms ease-out;
-      transition: all 350ms ease-out;
+      color: #fff;
+      -webkit-transition: opacity,top 350ms ease-out;
+      transition: opacity,top 350ms ease-out;
+    }
+    .hidden {
+      visibility: hidden !important;
     }
   </style>
 </head>
 <body>
   <div id="container">
-    <div class="skyline noselect pointer">R <div class="tooltip">Resume</div></div>
-    <div class="skyline noselect">U</div>
-    <div class="skyline noselect">Y</div>
-    <div class="skyline noselect">A</div>
-    <div class="skyline noselect">N</div>
+    <a href="#"><div class="skyline noselect pointer">R <div class="tooltip">Resume</div></div></a>
+    <a href="#"><div class="skyline noselect">U <div class="tooltip">&gt; &gt; &gt;</div></div></a>
+    <a href="#"><div class="skyline noselect pointer">Y <div class="tooltip">You &amp; Me</div></div></a>
+    <a href="#"><div class="skyline noselect pointer">A <div class="tooltip">Art</div></div></a>
+    <a href="#"><div class="skyline noselect">N <div class="tooltip">&lt; &lt; &lt;</div></div></a>
   </div>
 </body>
 <!-- TODO(ruyan): Analytics? -->
 <script type="text/javascript">
   var multiple = new Multiple({
     selector: 'div.skyline',
-    background: 'url(assets/img/skyline.jpg)'
+    background: 'url(assets/img/skyline.jpg)',
   });
-  multiple.update();
+  var multiple2 = new Multiple({
+    selector: 'div.tooltip',
+    background: 'linear-gradient(to right, #aaaec3, #bd91ae, #e1ab75)',
+  })
 </script>
 </html>
